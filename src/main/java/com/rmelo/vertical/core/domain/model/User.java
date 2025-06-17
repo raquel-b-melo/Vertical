@@ -9,9 +9,6 @@ import lombok.Setter;
 import java.util.Set;
 import java.util.UUID;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Table(name = "users")
 @Entity
 @Setter

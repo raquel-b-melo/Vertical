@@ -28,7 +28,7 @@ public class TokenService {
             throw new IllegalArgumentException("Tipo de principal inválido para geração de token.");
         }
         try {
-            Algorithm algorithm = Algorithm.HMAC256(secret); // 'secret' deve ser um campo da sua classe
+            Algorithm algorithm = Algorithm.HMAC256(secret);
             return JWT.create()
                     .withIssuer("auth-api")
                     .withSubject(logonUser.getLogin())

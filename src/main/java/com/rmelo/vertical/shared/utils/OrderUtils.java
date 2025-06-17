@@ -1,8 +1,9 @@
 package com.rmelo.vertical.shared.utils;
 
 import com.rmelo.vertical.core.domain.model.Order;
-import java.math.BigDecimal;
 import com.rmelo.vertical.core.domain.model.Product;
+
+import java.math.BigDecimal;
 
 public class OrderUtils {
     public static BigDecimal calculateTotal(Order order) {

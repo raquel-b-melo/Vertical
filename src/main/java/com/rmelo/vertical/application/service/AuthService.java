@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class AuthService implements UserDetailsService {
 
     private final LogonRepository logonRepository;
-    private final PasswordEncoder passwordEncoder; // Injetar a interface
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     public AuthService(LogonRepository logonRepository, PasswordEncoder passwordEncoder) {

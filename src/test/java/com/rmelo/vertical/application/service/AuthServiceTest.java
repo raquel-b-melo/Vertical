@@ -11,8 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -61,7 +59,6 @@ class AuthServiceTest {
     void shouldRegisterUserSuccessfully() {
         RegisterDTO registerDTO = new RegisterDTO("newUser", "securePassword", Roles.ADMIN);
 
-        // Definir comportamento antes de executar o método
         when(passwordEncoder.encode(registerDTO.password())).thenReturn("encodedPassword123");
 
         authService.register(registerDTO);
