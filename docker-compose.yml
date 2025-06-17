@@ -1,0 +1,23 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/vertical
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 12345
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+  db:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_DB: vertical
+      POSTGRES_USER: ${POSTGRES_USER_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_DB}
+    ports:
+      - "5432:5432"
