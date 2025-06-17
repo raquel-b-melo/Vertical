@@ -1,5 +1,8 @@
 package com.rmelo.vertical.core.domain.model.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum Roles {
 
     ADMIN("admin"),
@@ -9,10 +12,6 @@ public enum Roles {
 
     Roles(String role) {
         this.role = role;
-    }
-
-    public String getRole() {
-        return role;
     }
 
     public static Roles fromString(String role) {

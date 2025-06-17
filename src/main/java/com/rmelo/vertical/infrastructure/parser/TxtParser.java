@@ -4,8 +4,6 @@ import com.rmelo.vertical.core.domain.model.Order;
 import com.rmelo.vertical.core.domain.model.Product;
 import com.rmelo.vertical.core.domain.model.User;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;

@@ -4,7 +4,6 @@ import com.rmelo.vertical.core.domain.model.Order;
 import com.rmelo.vertical.core.domain.model.User;
 import com.rmelo.vertical.core.domain.model.dto.UserResponseDTO;
 import com.rmelo.vertical.core.domain.repository.OrderRepository;
-import com.rmelo.vertical.core.domain.repository.ProductRepository;
 import com.rmelo.vertical.core.domain.repository.UserRepository;
 import com.rmelo.vertical.infrastructure.parser.TxtParser;
 import com.rmelo.vertical.shared.utils.ResponseMapper;
@@ -39,18 +38,12 @@ class DataProcessingServiceTest {
     @Mock
     private OrderRepository orderRepository;
 
-    @Mock
-    private ProductRepository productRepository;
-
-    @Mock
-    private ResponseMapper responseMapper;
-
     @InjectMocks
     private DataProcessingService dataProcessingService;
 
     @BeforeEach
     void setUp() {
-        dataProcessingService = new DataProcessingService(txtParser, userRepository, orderRepository, productRepository, responseMapper);
+        dataProcessingService = new DataProcessingService(txtParser, userRepository, orderRepository);
     }
 
     @Test
